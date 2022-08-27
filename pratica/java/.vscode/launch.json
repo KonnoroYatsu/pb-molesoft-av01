@@ -1,0 +1,35 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Quiz",
+            "request": "launch",
+            "mainClass": "exercicio_08.Quiz",
+            "projectName": "exercicio_08"
+        },
+        {
+            "type": "java",
+            "name": "Launch LoginEMenssagemPerssonalizada",
+            "request": "launch",
+            "mainClass": "exercicio_09.LoginEMenssagemPerssonalizada",
+            "projectName": "exercicio_09"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalculaBonificacao",
+            "request": "launch",
+            "mainClass": "exercicio_10.CalculaBonificacao",
+            "projectName": "exercicio_10"
+        }
+    ]
+}

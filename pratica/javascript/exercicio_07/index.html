@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function calcular() {
+                var valor = document.querySelector("input").value;
+                var moedaDeCinquenta = 0;
+                var moedaDeVinteECinco = 0;
+                var moedaDeDez = 0;
+                var moedaDeCinco = 0;
+                var moedaDeUm = 0;
+                var totalDeMoeda = 0;
+
+                while (valor > 0) {
+                    if (valor >= 0.5) {
+                        moedaDeCinquenta++;
+                        valor -= 0.5;
+                        valor = parseFloat(valor.toFixed(2));
+                    }
+                    else if (valor >= 0.25) {
+                        moedaDeVinteECinco++;
+                        valor -= 0.25;
+                        valor = parseFloat(valor.toFixed(2));
+                    }
+                    else if (valor >= 0.1) {
+                        moedaDeDez++;
+                        valor -= 0.1;
+                        valor = parseFloat(valor.toFixed(2));
+                    }
+                    else if (valor >= 0.05) {
+                        moedaDeCinco++;
+                        valor -= 0.05;
+                        valor = parseFloat(valor.toFixed(2));
+                    }
+                    else {
+                        moedaDeUm++;
+                        valor -= 0.01;
+                        valor = parseFloat(valor.toFixed(2));
+                    }
+                    totalDeMoeda++;
+                }
+
+                var div = document.getElementById('resultado');
+                div.innerHTML =
+                    "<br><hr>" +
+                    "Total de moedas: " + totalDeMoeda +
+                    "<br>Sendo:<br>" +
+                    moedaDeCinquenta + " de 50 centavos<br>" +
+                    moedaDeVinteECinco + " de 25 centavos<br>" +
+                    moedaDeDez + " de 10 centavos<br>" +
+                    moedaDeCinco + " de 5 centavos<br>" +
+                    moedaDeUm + " de 1 centavos<br>"
+                ;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input>
+            <button onclick="calcular()">Calcular</button>
+        </div>
+
+        <div id="resultado"></div>
+    </body>
+</html>
